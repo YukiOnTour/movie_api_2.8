@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+</head>
+<body>
+    <h1>myFlix API Documentation</h1>
+    <table border="1">
+        <tr>
+            <th>Request</th>
+            <th>URL</th>
+            <th>Description</th>
+            <th>Parameters</th>
+            <th>Request Body Example</th>
+            <th>Response</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/movies</td>
+            <td>Return a list of all movies</td>
+            <td>None</td>
+            <td>None</td>
+            <td>Array of movie objects</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/movies/:title</td>
+            <td>Return data about a single movie by title</td>
+            <td>title (String)</td>
+            <td>None</td>
+            <td>Movie object</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/genres/:name</td>
+            <td>Return data about a genre by name</td>
+            <td>name (String)</td>
+            <td>None</td>
+            <td>Genre object</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/directors/:name</td>
+            <td>Return data about a director by name</td>
+            <td>name (String)</td>
+            <td>None</td>
+            <td>Director object</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/users</td>
+            <td>Allow new users to register</td>
+            <td>None</td>
+            <td>{ "username": "user", "password": "pass", "email": "user@example.com", "birthday": "YYYY-MM-DD" }</td>
+            <td>Message confirming registration</td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>/users/:username</td>
+            <td>Allow users to update their user info</td>
+            <td>username (String)</td>
+            <td>{ "username": "newUser", "password": "newPass", "email": "new@example.com", "birthday": "YYYY-MM-DD" }</td>
+            <td>Message confirming update</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/users/:username/movies/:movieID</td>
+            <td>Allow users to add a movie to their list of favorites</td>
+            <td>username (String), movieID (String)</td>
+            <td>None</td>
+            <td>Message confirming addition</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/users/:username/movies/:movieID</td>
+            <td>Allow users to remove a movie from their list of favorites</td>
+            <td>username (String), movieID (String)</td>
+            <td>None</td>
+            <td>Message confirming removal</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/users/:username</td>
+            <td>Allow existing users to deregister</td>
+            <td>username (String)</td>
+            <td>None</td>
+            <td>Message confirming deregistration</td>
+        </tr>
+    </table>
+</body>
+</html>
